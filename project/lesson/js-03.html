@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | 計算</title>
+</head>
+<body>
+
+<script>
+// ---------------------
+// 数値の計算
+// ---------------------
+// %は割った余りが表示される
+// 何も選択していない状態でコマンドcで一行コピーできる
+
+let x = 3;
+let y = 2;
+
+console.log(x + y);
+console.log(x - y);
+console.log(x * y);
+console.log(x / y);
+console.log(x % y);
+
+// ---------------------
+// 文字列の計算
+// ---------------------
+// 変数以外を追加しても記載することが可能
+
+let sei = "小林";
+let mei = "佳代";
+
+console.log(sei + mei + "です");
+
+
+// ---------------------
+// 演習: 以下の計算結果はどうなる？
+// ---------------------
+// ""で区切られていると文字列扱いになるので、並列表示になる
+
+let a = "1"
+let b = "2"
+console.log(a + b);
+
+// ""を外すと数字としてみなされるため計算される
+// すでに使った定義は再利用不可なので別の文字を使う
+let c = 1;
+let d = 2;
+console.log(c + d);
+
+// 基本的には自由に定義できるが、一部つけられない単語がある
+// ifやandなど、詳細は検索すると出てくる
+
+</script>
+</body>
+</html>

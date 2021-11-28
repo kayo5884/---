@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="js/jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" href="css/sample.css">
+<title>じゃんけん</title>
+</head>
+<body>
+
+<header>
+  <h1>じゃんけん</h1>
+</header>
+
+<main>
+  <ul>
+    <li id="gu_btn" name="user" value="1">グー</li>
+    <li id="cho_btn" name="user" value="2">チョキ</li>
+    <li id="par_btn" name="user" value="3">パー</li>
+  </ul>
+  <div>コンピュータの出した手は？「<span id="pc_hands">なに？</span>」</div>
+  <div>勝敗は？「<span id="judgement">なに？</span>」</div>
+
+</main>
+
+<footer></footer>
+<script>
+//じゃんけん用のSCRIPTを書いてください
+
+// なに？のところにランダムに表示、spanタグ、pc_handsのIDがふられている
+// その結果に基づいて勝ち負けを表示させる、judgmentのタグがふられている
+
+// グー・チョキ・パーのいずれかのボタンが押されたら実行される
+// コンピュータが出した手を計算する
+// 勝ち負け判定を実施
+// 勝敗を #judgementに出力する
+
+$("#gu_btn").on("click",function(){
+  //PChandsのランダム表示
+  const num = Math.ceil( Math.random()*3 );    // 1.乱数（1〜3）
+  let view = "";      // 2.if分岐処理
+    if (num == 1){
+       view = 'グー' ;
+      }else if (num == 2){
+       view = 'チョキ' ;
+      }else if (num == 3){
+       view = 'パー' ;
+      }    
+    $("#pc_hands").html(view);    // 3.表示処理
+  console.log(num);
+  if (num == 1){
+    result = 'あいこです' ;
+    }else if (num == 2){
+    result = 'あなたの勝ちです' ;
+    }else if (num == 3){
+    result = 'あなたの負けです';
+    }
+  // 2.表示処理
+  $("#judgement").html(result) ;
+});
+
+ 
+$("#cho_btn").on("click",function(){
+   const num = Math.ceil( Math.random()*3 );
+     let view = "";
+      if (num == 1){
+       view = 'グー' ;
+      }else if (num == 2){
+       view = 'チョキ' ;
+       }else if (num == 3){
+      view = 'パー' ;
+      }
+        $("#pc_hands").html(view);
+  console.log(num);
+
+  if (num == 2){
+    result = 'あいこです' ;
+  }else if (num == 3){
+    result = 'あなたの勝ちです' ;
+  }else if (num == 1){
+    result = 'あなたの負けです';
+  }
+  // 2.表示処理
+  $("#judgement").html(result) ;
+}); 
+
+$("#par_btn").on("click",function(){
+  const num = Math.ceil( Math.random()*3 );
+   let view = "";
+     if (num == 1){
+       view = 'グー' ;
+       }else if (num == 2){
+       view = 'チョキ' ;
+       }else if (num == 3){
+      view = 'パー' ;
+      }
+    $("#pc_hands").html(view);
+  console.log(num);
+  if (num == 3){
+    result = 'あいこです' ;
+  }else if (num == 1){
+    result = 'あなたの勝ちです' ;
+  }else if (num == 2){
+    result = 'あなたの負けです';
+  }
+  // 2.表示処理
+  $("#judgement").html(result) ;
+}); 
+
+
+
+</script>
+</body>
+</html>
+
+
